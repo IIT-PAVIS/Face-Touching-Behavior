@@ -16,9 +16,9 @@ The annotations include:
 * [ ] The cross-validation splits used to test the methods mentioned below.
 
 Given the dataset and the collected annotations, we applied the following methods for Face-Touch detection:
-* [ ] Rule-based (main file name: XX.m)
-* [ ] Hand-crafted features-based (main file name: XX.py)
-* [ ] Feature learning-based (training file name: XX.py, testing file name XX.py)
+* [ ] Rule-based (corresponding files: XX.m)
+* [ ] Hand-crafted features-based (corresponding files: XX.py)
+* [ ] Feature learning-based (corresponding files: dataset.py, model.py, test.py, train.py and utils.py)
 
 For any questions, feel free to contact cigdem.beyan@iit.it
 
