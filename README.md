@@ -13,6 +13,7 @@ The annotations include:
 * [ ] Face-touching behavior labels (1: face-touch, 0: no-face-touch) corresponding to all of the original video frames.
 * [ ] Pose estimations, including face and hand key-points detection, obtained by applying [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) to all of the original video frames.
 * [ ] The region of interests containing the face (the x and y coordinates of left-top corner of a bounding box, the width and height of it) calculated for all of the original video frames.
+* [ ] Hand-crafted features: i) face and hands bounding boxes, ii) face parts and hand key-points
 * [ ] The cross-validation splits used to test the methods mentioned below.
 
 Given the dataset and the collected annotations, we applied the following methods for Face-Touch detection:
