@@ -17,7 +17,7 @@ The annotations include:
 
 Given the dataset and the collected annotations, we applied the following methods for Face-Touch detection:
 * [ ] Rule-based (corresponding files: ruleBasedMethod_main.m and convertjsonToMat.m)
-* [ ] Hand-crafted features-based (corresponding files: XX.py)
+* [ ] Hand-crafted features-based (corresponding files: NN_TrainTest.py)
 * [ ] Feature learning-based (corresponding files: dataset.py, model.py, test.py, train.py and utils.py)
 
 For any questions, feel free to contact cigdem.beyan@iit.it
