@@ -1,25 +1,26 @@
 %%
 
-clc
-clc
-clear all
-clear all
+% Step 1: Convert each json (OpenPse results) to mat file and save under mat_json_openPose
 
-%convert json to mat and save it as mat under mat_json_openPose
-%You need to download the code in: https://it.mathworks.com/matlabcentral/fileexchange/20565-json-parser
-%to use the parse_json function that is being called by convertjsonToMat.m
 
-v_json = 'C:\Users\cbeyan\Desktop\faceTouching\leadershipDetection\jsons_openPose\'; %openPose results in jsons format
-v_mat = 'C:\Users\cbeyan\Desktop\faceTouching\leadershipDetection\mat_json_openPose\'; %directory to save the openpose results as mat files
+% You need to download the code in: https://it.mathworks.com/matlabcentral/fileexchange/20565-json-parser
+% to use the parse_json function that is being called by convertjsonToMat.m
+% You need to download the code in: https://it.mathworks.com/matlabcentral/fileexchange/19548-clear-except
+% to be able to call function clearex
+
+v_json = 'jsons_openPose\'; %openPose results in jsons format
+v_mat = 'mat_json_openPose\'; %directory to save the openpose results as mat files
 jsonFiles_all=dir(v_json);
 jsonFiles_all(1)=[];
 jsonFiles_all(1)=[];
 
-for i=1:size(jsonFiles_all,1) %13 sorunlu
+for i=1:size(jsonFiles_all,1)
     convertjsonToMat(v_json, [jsonFiles_all(i).name],[v_mat jsonFiles_all(i).name(1:end-5) '.mat']);
 end
 
 %%
+% Step 2: Prediction
+
 clearex('v_mat')
 mat_all=dir(v_mat);
 mat_all(1)=[];
@@ -93,4 +94,5 @@ for klm=1:size(mat_all,1)
     end
     save(['prediction_method1\' mat_all(klm).name], 'my_prediction')
     clearex('data', 'i', 'v_mat','mat_all')
+    
 end % end of reading mat files
