@@ -190,7 +190,7 @@ def main(args):
 
         with open(json_out_path, 'wb') as fp:
             pickle.dump(experiments, fp, protocol=pickle.HIGHEST_PROTOCOL)
-            # MBMB - Verify the splits are always the same
+            
     else:
         experiments = pickle.load(open(json_out_path, "rb"))
 
